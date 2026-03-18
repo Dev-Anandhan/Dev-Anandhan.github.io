@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dev Anandhan M – AI Full Stack Engineer | Dev Anandhans Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AI Full Stack Engineer portfolio — JARVIS-inspired HUD interface showcasing intelligent systems, automation frameworks, RAG systems, and security intelligence platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+  <!-- ==================== BOOT SEQUENCE OVERLAY ==================== -->
+  <div id="boot-overlay">
+    <div class="boot-content">
+      <div class="arc-reactor">
+        <div class="arc-ring arc-ring-1"></div>
+        <div class="arc-ring arc-ring-2"></div>
+        <div class="arc-ring arc-ring-3"></div>
+        <div class="arc-core"></div>
+      </div>
+      <div class="boot-text">
+        <span id="boot-line-1"></span>
+        <span id="boot-line-2"></span>
+        <span id="boot-line-3"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HUD CANVAS ==================== -->
+  <canvas id="jarvis-hud"></canvas>
+
+  <!-- ==================== SCANLINE OVERLAY ==================== -->
+  <div class="scanline-overlay"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header id="jarvis-nav">
+    <div class="nav-left">
+      <div class="nav-logo">
+        <div class="nav-reactor-mini"></div>
+        <span class="nav-logo-text">J.A.R.V.I.S.</span>
+      </div>
+      <div class="nav-status">
+        <span class="status-indicator"></span>
+        <span>SYSTEMS ONLINE</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero" data-section="hero">OVERVIEW</a>
+      <a href="#about" data-section="about">ABOUT</a>
+      <a href="#skills" data-section="skills">CAPABILITIES</a>
+      <a href="#projects" data-section="projects">PROJECTS</a>
+      <a href="#experience" data-section="experience">EXPERIENCE</a>
+      <a href="#hackathons" data-section="hackathons">HACKATHONS</a>
+      <a href="#contact" data-section="contact">CONTACT</a>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-clock" id="nav-clock"></span>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="jarvis-section">
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="hud-label">// OPERATOR IDENTIFICATION</div>
+          <div class="hero-kicker">
+            <span class="kicker-bracket">[</span>
+            AI FULL STACK ENGINEER
+            <span class="kicker-bracket">]</span>
+          </div>
+          <h1 class="hero-title" id="hero-title">
+            <span class="title-line">Building Intelligent</span>
+            <span class="title-line title-highlight">Systems with AI</span>
+          </h1>
+          <p class="hero-desc">
+            AI engineer from Chennai specializing in automation, multimodal RAG systems,
+            and security intelligence platforms that turn complex data into real-time decisions.
+          </p>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-box">
+              <span class="stat-value" data-count="500">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Problems Solved</span>
+            </div>
+            <div class="hero-stat-box">
+              <span class="stat-value" data-count="23">0</span>
+              <span class="stat-label">Google Badges</span>
+            </div>
+            <div class="hero-stat-box">
+              <span class="stat-value" data-count="2">0</span><span class="stat-plus">×</span>
+              <span class="stat-label">Hackathon Wins</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-jarvis btn-primary-jarvis">
+              <span class="btn-icon">◆</span> Enter AI Lab
+            </a>
+            <a href="#contact" class="btn-jarvis btn-ghost-jarvis">
+              <span class="btn-icon">▶</span> Deploy Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="profile-hud">
+            <div class="profile-arc-reactor">
+              <div class="profile-ring profile-ring-1"></div>
+              <div class="profile-ring profile-ring-2"></div>
+              <div class="profile-ring profile-ring-3"></div>
+              <div class="profile-avatar">
+                <img src="./assets/dev_photo.jpeg" alt="Dev Anandhan M" />
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-name">DEV ANANDHAN M</div>
+              <div class="profile-role">AI Full Stack Engineer</div>
+              <div class="profile-location">
+                <span class="location-dot"></span> Chennai, India
+              </div>
+            </div>
+            <div class="profile-data-grid">
+              <div class="data-cell">
+                <span class="data-label">EMAIL</span>
+                <a href="mailto:da89fhaj@gmail.com" class="data-value">da89fhaj@gmail.com</a>
+              </div>
+              <div class="data-cell">
+                <span class="data-label">PHONE</span>
+                <span class="data-value">+91 96001 22315</span>
+              </div>
+              <div class="data-cell">
+                <span class="data-label">FOCUS</span>
+                <span class="data-value">RAG · Security · Agents</span>
+              </div>
+              <div class="data-cell">
+                <span class="data-label">STATUS</span>
+                <span class="data-value status-active"><span class="status-indicator"></span> ACTIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <span class="section-divider"></span>
+        <span class="section-title">ABOUT THE OPERATOR</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading">Designing Intelligent Systems,<br />Not Just Models</h2>
+          <p>
+            I am an AI developer focused on building end‑to‑end intelligent systems — from data
+            pipelines and model orchestration to interfaces that humans actually enjoy using.
+            My work spans multimodal retrieval‑augmented generation, automation frameworks, and
+            privacy‑first security intelligence platforms.
+          </p>
+          <p>
+            I care deeply about latency, observability, and reliability — the details that turn
+            an AI prototype into a dependable product. Recently, I have been leading projects
+            around autonomous agentic workflows and AI‑driven safety monitoring.
+          </p>
+        </div>
+        <div class="about-metrics">
+          <div class="metric-hud">
+            <div class="metric-ring"></div>
+            <div class="metric-content">
+              <span class="metric-number" data-count="500">0</span><span class="stat-plus">+</span>
+              <span class="metric-label">Problems Solved</span>
+              <span class="metric-sub">HackerRank Gold · LeetCode 150+</span>
+            </div>
+          </div>
+          <div class="metric-hud">
+            <div class="metric-ring"></div>
+            <div class="metric-content">
+              <span class="metric-number" data-count="23">0</span>
+              <span class="metric-label">Google Skill Boost</span>
+              <span class="metric-sub">Cloud · AI · Data</span>
+            </div>
+          </div>
+          <div class="metric-hud metric-hud-wide">
+            <div class="metric-ring"></div>
+            <div class="metric-content">
+              <span class="metric-label">Hackathon Track Record</span>
+              <span class="metric-sub">Multiple wins across innovation, impact, and space tech challenges, including
+                ISRO‑linked hackathons.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <span class="section-divider"></span>
+        <span class="section-title">CAPABILITIES MATRIX</span>
+      </div>
+      <h2 class="section-heading">Skills Mapped as an AI System</h2>
+      <div class="skills-grid">
+        <div class="skills-bars-panel">
+          <div class="skill-category">
+            <h3 class="skill-cat-title">Languages</h3>
+            <div class="skill-bar" data-skill="Python" data-level="95"></div>
+            <div class="skill-bar" data-skill="JavaScript" data-level="85"></div>
+            <div class="skill-bar" data-skill="Java" data-level="70"></div>
+            <div class="skill-bar" data-skill="HTML/CSS" data-level="90"></div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">Frameworks & Databases</h3>
+            <div class="skill-bar" data-skill="React.js" data-level="80"></div>
+            <div class="skill-bar" data-skill="Express.js" data-level="75"></div>
+            <div class="skill-bar" data-skill="MongoDB" data-level="80"></div>
+            <div class="skill-bar" data-skill="MySQL" data-level="70"></div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">AI / Data Libraries</h3>
+            <div class="skill-bar" data-skill="LangChain" data-level="90"></div>
+            <div class="skill-bar" data-skill="NumPy / Pandas" data-level="85"></div>
+            <div class="skill-bar" data-skill="Matplotlib" data-level="75"></div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">Tools & Cloud</h3>
+            <div class="skill-bar" data-skill="Git / GitHub" data-level="90"></div>
+            <div class="skill-bar" data-skill="AWS / GCP" data-level="75"></div>
+            <div class="skill-bar" data-skill="Node.js" data-level="85"></div>
+            <div class="skill-bar" data-skill="n8n" data-level="80"></div>
+          </div>
+        </div>
+        <div class="skills-orbit-panel">
+          <div class="jarvis-orbit">
+            <div class="orbit-ring orbit-ring-outer">
+              <span class="orbit-node" style="--angle: 0deg;">LLMs</span>
+              <span class="orbit-node" style="--angle: 90deg;">Automation</span>
+              <span class="orbit-node" style="--angle: 180deg;">Cloud</span>
+              <span class="orbit-node" style="--angle: 270deg;">Data</span>
+            </div>
+            <div class="orbit-ring orbit-ring-inner">
+              <span class="orbit-node" style="--angle: 45deg;">RAG</span>
+              <span class="orbit-node" style="--angle: 165deg;">Agents</span>
+              <span class="orbit-node" style="--angle: 285deg;">Security</span>
+            </div>
+            <div class="orbit-core">AI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <span class="section-divider"></span>
+        <span class="section-title">SELECTED SYSTEMS</span>
+      </div>
+      <h2 class="section-heading">Security, RAG & Agentic Systems</h2>
+      <p class="section-desc">
+        A curated set of platforms and prototypes where AI is embedded deeply into the
+        product — from real‑time privacy monitoring to multimodal offline assistants.
+      </p>
+      <div class="projects-grid">
+        <article class="project-card project-featured" data-tilt>
+          <div class="project-hud-corner tl"></div>
+          <div class="project-hud-corner tr"></div>
+          <div class="project-hud-corner bl"></div>
+          <div class="project-hud-corner br"></div>
+          <div class="project-header">
+            <h3>ShadowLens</h3>
+            <span class="project-badge">92% ACCURACY</span>
+          </div>
+          <p class="project-subtitle">Security Intelligence Platform</p>
+          <p class="project-desc">
+            Real‑time AI privacy monitoring system that detects PII leakage and third‑party
+            tracking across network activity and policies, surfacing risks through a
+            visualization‑first dashboard.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>Flask</span><span>Transformer NLP</span>
+            <span>Chart.js</span><span>Blockchain</span><span>REST APIs</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-hud-corner tl"></div>
+          <div class="project-hud-corner tr"></div>
+          <div class="project-hud-corner bl"></div>
+          <div class="project-hud-corner br"></div>
+          <div class="project-header">
+            <h3>Multimodal RAG</h3>
+            <span class="project-badge">−30% LATENCY</span>
+          </div>
+          <p class="project-subtitle">Offline LLM Prototype</p>
+          <p class="project-desc">
+            Retrieval‑augmented generation system supporting text, image, and audio queries
+            for offline environments, built to minimize latency while keeping responses rich.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>LangChain</span><span>CLIP</span><span>FAISS</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-hud-corner tl"></div>
+          <div class="project-hud-corner tr"></div>
+          <div class="project-hud-corner bl"></div>
+          <div class="project-hud-corner br"></div>
+          <div class="project-header">
+            <h3>HireWise AI</h3>
+            <span class="project-badge">VOICE-DRIVEN</span>
+          </div>
+          <p class="project-subtitle">Interview Assistant</p>
+          <p class="project-desc">
+            Voice‑based mock interview assistant that generates questions and evaluates
+            responses with semantic scoring, helping candidates iterate faster.
+          </p>
+          <div class="project-tech">
+            <span>AI</span><span>Voice</span><span>Semantic Scoring</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-hud-corner tl"></div>
+          <div class="project-hud-corner tr"></div>
+          <div class="project-hud-corner bl"></div>
+          <div class="project-hud-corner br"></div>
+          <div class="project-header">
+            <h3>Auto Recipient Sim</h3>
+            <span class="project-badge">−45% TESTING</span>
+          </div>
+          <p class="project-subtitle">CRM Automation</p>
+          <p class="project-desc">
+            CRM automation system leveraging n8n workflow orchestration to simulate complex
+            recipient behaviors, drastically reducing manual QA cycles.
+          </p>
+          <div class="project-tech">
+            <span>n8n</span><span>Automation</span><span>CRM</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-hud-corner tl"></div>
+          <div class="project-hud-corner tr"></div>
+          <div class="project-hud-corner bl"></div>
+          <div class="project-hud-corner br"></div>
+          <div class="project-header">
+            <h3>SAFEE</h3>
+            <span class="project-badge">AI SAFETY</span>
+          </div>
+          <p class="project-subtitle">Safety Analytics Engine</p>
+          <p class="project-desc">
+            AI safety intelligence system focused on automated threat monitoring, anomaly
+            detection, and security analytics to keep AI infrastructures observable and safe.
+          </p>
+          <div class="project-tech">
+            <span>AI</span><span>Security</span><span>Analytics</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <span class="section-divider"></span>
+        <span class="section-title">EXPERIENCE TIMELINE</span>
+      </div>
+      <h2 class="section-heading">Mission Logs</h2>
+      <div class="timeline-jarvis">
+        <div class="timeline-line"></div>
+        <div class="timeline-entry">
+          <div class="timeline-node">
+            <div class="node-pulse"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-hud-label">DEPLOYMENT 01</div>
+            <h3>Astrixio</h3>
+            <span class="timeline-role">Machine Learning Intern – Team Leader</span>
+            <div class="timeline-project-name">Project: Autodev</div>
+            <p>
+              Led an autonomous agentic AI system that reduces development effort by around 60%
+              by coordinating agents across planning, coding, and validation loops.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-entry">
+          <div class="timeline-node">
+            <div class="node-pulse"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-hud-label">DEPLOYMENT 02</div>
+            <h3>Iniramsquare Private Limited</h3>
+            <span class="timeline-role">AI / ML Intern – Tech Lead</span>
+            <div class="timeline-project-name">Project: Admini SaaS Platform</div>
+            <p>
+              Drove AI features for an admin‑focused SaaS platform, designing ML components and
+              data flows that improved automation and decision‑making for operations teams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HACKATHONS ===== -->
+    <section id="hackathons" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <span class="section-divider"></span>
+        <span class="section-title">HACKATHON TRACK RECORD</span>
+      </div>
+      <h2 class="section-heading">Competing Where Ideas Ship Fast</h2>
+      <p class="section-desc">
+        I use hackathons as a playground to test new ideas, move fast with constraints, and
+        ship ambitious AI‑driven prototypes in days, not months.
+      </p>
+      <div class="trophy-grid">
+        <div class="trophy-card trophy-gold">
+          <div class="trophy-glow"></div>
+          <div class="trophy-icon">🏆</div>
+          <h3>Project Innovation Club</h3>
+          <p class="trophy-venue">St Joseph's</p>
+          <p class="trophy-result">Winner · 2026</p>
+        </div>
+        <div class="trophy-card trophy-gold">
+          <div class="trophy-glow"></div>
+          <div class="trophy-icon">🏆</div>
+          <h3>Impactathon</h3>
+          <p class="trophy-venue">Innovation Challenge</p>
+          <p class="trophy-result">Winner – Internship Awarded · 2025</p>
+        </div>
+        <div class="trophy-card trophy-silver">
+          <div class="trophy-glow"></div>
+          <div class="trophy-icon">🚀</div>
+          <h3>Bharatiya Antariksh Hackathon</h3>
+          <p class="trophy-venue">ISRO</p>
+          <p class="trophy-result">Shortlisted</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section id="achievements" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <span class="section-divider"></span>
+        <span class="section-title">ACHIEVEMENTS & SIGNALS</span>
+      </div>
+      <h2 class="section-heading">Signals That I Ship and Learn Fast</h2>
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <div class="achievement-icon">◆</div>
+          <span>Solved 500+ problems — HackerRank Gold Medal</span>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">◆</div>
+          <span>Solved 150+ problems — LeetCode</span>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">◆</div>
+          <span>23 Google Skill Boost Badges</span>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">◆</div>
+          <span>Product Pitching — TN Startup Summit</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="jarvis-section" data-reveal>
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <span class="section-divider"></span>
+        <span class="section-title">CONTACT TERMINAL</span>
+      </div>
+      <h2 class="section-heading">Open a Channel to the Lab</h2>
+      <p class="section-desc">
+        Looking to ship an AI‑powered product, automate a complex workflow, or harden an
+        existing system with intelligent monitoring? Open a session below.
+      </p>
+      <div class="contact-terminal">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot amber"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">jarvis_contact_protocol.sh</span>
+        </div>
+        <div class="terminal-screen">
+          <div class="terminal-line">
+            <span class="t-prompt">dev@jarvis</span><span class="t-sep">:</span><span
+              class="t-path">~/deploy</span><span class="t-dollar">$</span> connect --channel=email
+          </div>
+          <div class="terminal-line t-output">
+            → <a href="mailto:da89fhaj@gmail.com">da89fhaj@gmail.com</a>
+          </div>
+          <div class="terminal-line">
+            <span class="t-prompt">dev@jarvis</span><span class="t-sep">:</span><span
+              class="t-path">~/deploy</span><span class="t-dollar">$</span> connect --channel=github
+          </div>
+          <div class="terminal-line t-output">
+            → <a href="https://github.com/Dev-Anandhan" target="_blank" rel="noreferrer">github.com/Dev-Anandhan</a>
+          </div>
+          <div class="terminal-line">
+            <span class="t-prompt">dev@jarvis</span><span class="t-sep">:</span><span
+              class="t-path">~/deploy</span><span class="t-dollar">$</span> connect --channel=linkedin
+          </div>
+          <div class="terminal-line t-output">
+            → <a href="https://www.linkedin.com/in/dev-anandhan-8685a1322/" target="_blank"
+              rel="noreferrer">linkedin.com/in/dev-anandhan</a>
+          </div>
+          <div class="terminal-line">
+            <span class="t-prompt">dev@jarvis</span><span class="t-sep">:</span><span
+              class="t-path">~/deploy</span><span class="t-dollar">$</span> <span class="t-cursor">_</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="jarvis-footer">
+      <span>© <span id="year"></span> Dev Anandhan M · J.A.R.V.I.S. Interface</span>
+      <span>Designed with precision. Powered by ambition.</span>
+    </footer>
+  </main>
+
+  <!-- Vendor Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+
+</html>
