@@ -207,6 +207,34 @@
     ctx.stroke();
   }
 
+  // ==================== SMOOTH SCROLL (LENIS) ====================
+  let lenis;
+
+  function initLenis() {
+    if (typeof Lenis === 'undefined') return;
+
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    // Synchronize Lenis with GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+  }
+
   // ==================== SCROLL ANIMATIONS ====================
   function initScrollAnimations() {
     // Section reveals with IntersectionObserver
@@ -240,26 +268,31 @@
       updateActiveNavLink();
     });
 
-    // Smooth scroll for nav links
+    // Smooth scroll for nav links using Lenis
     document.querySelectorAll('.nav-links a').forEach((link) => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const target = link.getAttribute('href');
+        if (lenis && target) {
+          lenis.scrollTo(target, { offset: -20 });
+        } else {
+          const targetEl = document.querySelector(target);
+          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
 
-    // Also smooth scroll for hero CTA buttons
+    // Also smooth scroll for hero CTA buttons using Lenis
     document.querySelectorAll('.btn-jarvis').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         const href = btn.getAttribute('href');
         if (href && href.startsWith('#')) {
           e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (lenis) {
+            lenis.scrollTo(href, { offset: -20 });
+          } else {
+            const targetEl = document.querySelector(href);
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         }
       });
@@ -487,6 +520,7 @@
 
   // ==================== MAIN ENTRY ====================
   function startMainAnimations() {
+    initLenis();
     initHudCanvas();
     initScrollAnimations();
     initCardTilt();
